@@ -22,7 +22,7 @@
     <script src="../dist/development/ovenplayer/ovenplayer.js"></script>
 </head>
 <body>
-    
+
     <div class="container mt-4">
         <div id="demo-navi" class="row">
             <div class="col-12 mb-4">
@@ -105,7 +105,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
 
@@ -126,20 +125,20 @@
     <script>
         var player = "", preSources = "", errorOccured = false, isSSL = window.location.protocol === "https:";
         var getParameterByName = function (name, url) {
+            console.log("@@@@@@@@@@@@@@@@@@",name,url)
             if (!url) url = window.location.href;
+            console.log("^^^^^^^^^^^^^",url)
             name = name.replace(/[\[\]]/g, '\\$&');
+            console.log("^&&&&&&&&&&&&&&&&&&&&&&",name)
             var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
                 results = regex.exec(url);
             if (!results) return null;
             if (!results[2]) return '';
+            console.log("$$$$$$$$$$$$$$$$$$$",results[2])
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
         var urlSources = getParameterByName("sources");
-        var defaultSources = [{
-                type: 'mp4',
-                file:  'wss://stream1.ddns.net.in:3333/app/stream1_o',
-                label: '720'
-            },
+        var defaultSources = [
             {
                 type: 'mp4',
                 file: '../dist/OCP_720.mp4',
@@ -149,7 +148,33 @@
                 type: 'mp4',
                 file: '../dist/OCP_1080.mp4',
                 label: '1080p'
-            }];
+            },
+            {
+                type: 'mp4',
+                file:  'wss://stream1.ddns.net.in:3333/app/stream1_o',
+                label: '720p'
+            },
+            {
+                type: 'mp4',
+                file:  'wss://stream1.ddns.net.in:3333/app/stream2_o',
+                label: '720p'
+            },
+            {
+                type: 'mp4',
+                file:  'wss://stream1.ddns.net.in:3333/app/stream3_o',
+                label: '720p'
+            },
+            {
+                type: 'mp4',
+                file:  'wss://stream1.ddns.net.in:3333/app/stream4_o',
+                label: '720p'
+            },
+            {
+                type: 'mp4',
+                file: ' https://www.radiantmediaplayer.com/media/bbb-360p.mp4',
+                label: '720p'
+            },
+        ];
         var tracks = [
             {
                 file: '../dist/caption_en.srt',
@@ -178,9 +203,8 @@
         console.log("PRE SOURCE : ");
         console.log(preSources);
         $( document ).ready(function() {
-
+            console.log("@@@@@@@@@@@@@@@@@@@@@@")
             var clipboard = new ClipboardJS('.btnExport');
-
             clipboard.on('success', function(e) {
                 $('.btnExport').tooltip('show');
                 setTimeout(function(){
@@ -192,8 +216,14 @@
 
 
             player = OvenPlayer.create("player", {
-                sources: preSources || defaultSources
+                // if(){
+
+                // }else{
+                    sources: defaultSources[0]
+                // }
+
             });
+            console.log(" player player",defaultSources,player)
             player.on("ready", function(error){
                 errorOccured = false;
             });
@@ -221,14 +251,32 @@
                     this.choicedProtocol = 'webrtc';
                 },
                 addSource : function(url){
-                    let type = "", data = {}, isMixedContentProblem = false;
-console.log("url........",url);
+                // var obj ={
+                //     type: 'webrtc',
+                //     file:  url,
+                //     label: '720p'
+                // }
+
+                player = OvenPlayer.create("player", {
+                    sources: defaultSources.find((source) => {return source.file == url})
+                });
+                    // console.log("Yyyyyyyyyyyyyyyyyy",defaultSources)
+                    // console.log("beforefileName--",defaultSources)
+                    // defaultSources[0].file=url;
+
+                    // console.log("AfterfileName--",defaultSources[0].file)
+                    // let type = "", data = {}, isMixedContentProblem = false;
+                    // console.log("url........",url);
+                    // player = OvenPlayer.create("player", {
+                    //         sources:url
+                    //     });
                     const findProtocol = function(url){
-                        console.log()
+                        console.log("url",url)
                         let protocol = "Protocol";
                         if(url.indexOf('rtmp:') === 0){
                             protocol = "rtmp";
                         }else if(url.indexOf('ws:') === 0 || url.indexOf('wss:') === 0){
+                            console.log("########")
                             protocol = "webrtc";
                         }else if(url.indexOf('http:') === 0 || url.indexOf('https:') === 0){
                             if(url.indexOf('.m3u8') > 0){
