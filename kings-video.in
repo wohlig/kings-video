@@ -1,0 +1,12 @@
+server {
+       listen 80;
+
+       server_name kingsvideo.wohlig.in;
+
+       root /var/www/kings-video/docs;
+       index index.html;
+
+       location / {
+               try_files $uri $uri/ =404;
+    }
+}
