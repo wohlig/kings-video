@@ -19,7 +19,7 @@
     <script src="lib/jquery-1.12.4.min.js"></script>
     <script src="lib/popper.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
-    <script src="../dist/development/ovenplayer/ovenplayer.js"></script>
+    <script src="ovenplayer.js"></script>
 </head>
 <body>
 
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mt-2">
+                <!-- <div class="card mt-2">
                     <div class="card-body ">
                         <h5 class="card-title">Usage</h5>
                         <div class="card bg-light">
@@ -104,17 +104,17 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
 
-            <div class="col-12 mb-2">
+            <!-- <div class="col-12 mb-2">
                 <div class="text-center mt-2">
                     <small>
                         Powered by <a href="https://github.com/AirenSoft/OvenMediaEngine" class="text-primary" target="_blank">OvenMediaEngine</a> and <a href="https://github.com/AirenSoft/OvenPlayer" class="text-primary" target="_blank">OvenPlayer</a>.
                     </small>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
@@ -291,7 +291,7 @@
                     };
                     this.choicedProtocol = findProtocol(this.url);
                     if(this.choicedProtocol === "Protocol"){
-                        this.errorMessage = "Please enter a protocol.";
+                        this.errorMessage = "";
                         return;
                     }
                     if(!this.url){
