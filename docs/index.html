@@ -1,136 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <title>OvenPlayer</title>
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>OvenPlayer</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="lib/bootstrap.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Noto+Sans"
-      rel="stylesheet"
-    />
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
-    <script src="lib/vue.min.js"></script>
-    <script src="lib/dash.all.min.js"></script>
-    <script src="lib/clipboard.min.js"></script>
-    <script src="lib/jquery-1.12.4.min.js"></script>
-    <script src="lib/popper.min.js"></script>
-    <script src="lib/bootstrap.min.js"></script>
-    <script src="../dist/development/ovenplayer/ovenplayer.js"></script>
-  </head>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="lib/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" />
 
-  <body>
-    <div class="media-server mt-4">
-      <div class="container">
-        <div class="row mx-auto">
-          <div class="col-md-3">
-            <iframe
-              width="100%"
-              height="250"
-              src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=125429321917651163127241"
-              title="itvlivestreaming"
-            >
-            </iframe>
-            <div class="text-center">1</div>
-          </div>
-          <div class="col-md-3">
-            <iframe
-              width="100%"
-              height="250"
-              src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=272407101385686887913484"
-              title="itvlivestreaming"
-            >
-            </iframe>
-            <div class="text-center">2</div>
-          </div>
-          <div class="col-md-3">
-            <iframe
-              width="100%"
-              height="250"
-              src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=909741129721314814633483"
-              title="itvlivestreaming"
-            >
-            </iframe>
-            <div class="text-center">3</div>
-          </div>
-          <div class="col-md-3">
-            <iframe
-              width="100%"
-              height="250"
-              src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=505006502128779211554989"
-              title="itvlivestreaming"
-            >
-            </iframe>
-            <div class="text-center">4</div>
-          </div>
+  <script src="lib/vue.min.js"></script>
+  <script src="lib/dash.all.min.js"></script>
+  <script src="lib/clipboard.min.js"></script>
+  <script src="lib/jquery-1.12.4.min.js"></script>
+  <script src="lib/popper.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  <script src="../dist/development/ovenplayer/ovenplayer.js"></script>
+</head>
+
+<body>
+  <div class="media-server mt-4">
+    <div class="container-fluid">
+      <div class="row mx-auto">
+        <div class="col-md-3">
+          <iframe width="100%" height="250" frameborder="0" allowfullscreen
+            src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=125429321917651163127241"
+            title="itvlivestreaming">
+          </iframe>
+          <div class="text-center">1</div>
         </div>
-        <div class="row mx-auto">
-          <div class="col-md-3">
-            <iframe
-              width="100%"
-              height="250"
-              src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=047156640785836762291351"
-              title="itvlivestreaming"
-            >
-            </iframe>
-            <div class="text-center">5</div>
-          </div>
-          <div class="col-md-3">
-            <iframe
-              width="100%"
-              height="250"
-              src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=560019828039736726971504"
-              title="itvlivestreaming"
-            >
-            </iframe>
-            <div class="text-center">6</div>
-          </div>
-          <div class="col-md-3">
-            <iframe
-              width="100%"
-              height="250"
-              src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=110414447570998579964019"
-              title="itvlivestreaming"
-            >
-            </iframe>
-            <div class="text-center">7</div>
-          </div>
-          <div class="col-md-3">
-            <iframe
-              width="100%"
-              height="250"
-              src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=201293139759664247893779"
-              title="itvlivestreaming"
-            >
-            </iframe>
-            <div class="text-center">8</div>
-          </div>
+        <div class="col-md-3">
+          <iframe frameborder="0" allowfullscreen width="100%" height="250"
+            src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=272407101385686887913484"
+            title="itvlivestreaming">
+          </iframe>
+          <div class="text-center">2</div>
+        </div>
+        <div class="col-md-3">
+          <iframe width="100%" height="250" frameborder="0" allowfullscreen
+            src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=909741129721314814633483"
+            title="itvlivestreaming">
+          </iframe>
+          <div class="text-center">3</div>
+        </div>
+        <div class="col-md-3">
+          <iframe width="100%" height="250" frameborder="0" allowfullscreen
+            src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=505006502128779211554989"
+            title="itvlivestreaming">
+          </iframe>
+          <div class="text-center">4</div>
+        </div>
+      </div>
+      <div class="row mx-auto">
+        <div class="col-md-3">
+          <iframe width="100%" height="250" frameborder="0" allowfullscreen
+            src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=047156640785836762291351"
+            title="itvlivestreaming">
+          </iframe>
+          <div class="text-center">5</div>
+        </div>
+        <div class="col-md-3">
+          <iframe width="100%" height="250" frameborder="0" allowfullscreen
+            src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=560019828039736726971504"
+            title="itvlivestreaming">
+          </iframe>
+          <div class="text-center">6</div>
+        </div>
+        <div class="col-md-3">
+          <iframe width="100%" height="250" frameborder="0" allowfullscreen
+            src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=110414447570998579964019"
+            title="itvlivestreaming">
+          </iframe>
+          <div class="text-center">7</div>
+        </div>
+        <div class="col-md-3">
+          <iframe width="100%" height="250" frameborder="0" allowfullscreen
+            src="https://itvlivestreaming.club:5443/WebRTCAppEE/play.html?name=201293139759664247893779"
+            title="itvlivestreaming">
+          </iframe>
+          <div class="text-center">8</div>
         </div>
       </div>
     </div>
-    <script></script>
-  </body>
+  </div>
+  <script></script>
+</body>
+
 </html>
